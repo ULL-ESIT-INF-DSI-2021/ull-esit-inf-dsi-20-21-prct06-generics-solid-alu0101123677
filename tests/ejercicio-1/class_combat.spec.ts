@@ -16,6 +16,16 @@ describe('check Combat class', () => {
   });
 });
 
+
+describe('check start function', () => {
+  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 30, 40, 10, "Siente la fuerza");
+  let Superman = new DC("Superman", 1.0, 2.0, 30, 40, 10, "Muere villano");
+  let combat = new Combat(DarthVader, Superman);
+  it('comprobacion si la funcion start funciona correctamente', () => {
+    expect(combat.start()).to.be.eql("Darth Vader");
+  });
+});
+
 /*describe('check fight function', () => {
   let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 30, 40, 10, "Siente la fuerza");
   let Superman = new DC("Superman", 1.0, 2.0, 30, 40, 10, "Muere villano");
