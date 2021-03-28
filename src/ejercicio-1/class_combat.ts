@@ -22,7 +22,10 @@ export class Combat {
   }
 
   priority(): number {
-    return
+    if (this.fighter1.getSpeed() > this.fighter2.getSpeed())
+      return 1;
+    else
+      return 2;
   }
   
   lowEfficiency(): number {

@@ -26,6 +26,19 @@ describe('check start function', () => {
   });
 });
 
+describe('check priority function', () => {
+  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 30, 40, 10, "Siente la fuerza");
+  let Superman = new DC("Superman", 1.0, 2.0, 30, 40, 20, "Muere villano");
+  it('comprobacion si la funcion priority funciona correctamente, se espera un 1', () => {
+    let combat = new Combat(Superman, DarthVader);
+    expect(combat.priority()).to.be.equal(1);
+  });
+  it('comprobacion si la funcion priority funciona correctamente, se espera un 2', () => {
+    let combat = new Combat(DarthVader, Superman);
+    expect(combat.priority()).to.be.equal(2);
+  });
+});
+
 /*describe('check fight function', () => {
   let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 30, 40, 10, "Siente la fuerza");
   let Superman = new DC("Superman", 1.0, 2.0, 30, 40, 10, "Muere villano");
