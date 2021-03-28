@@ -18,37 +18,51 @@ export class Combat {
   }
 
   fight(): number {
-    return 1;
+    let winner: number = 0;
+    //let healt1: number = this.fighter1.
+    //let healt2: number = this.fighter2.
+    let priority: number = this.priority();
+    while (winner == 0) {
+      if (priority == 1) {
+        attack(this.fighter1, this.fighter2);
+        attack(this.fighter2, this.fighter1);
+      }
+      else {
+        attack(this.fighter2, this.fighter1);
+        attack(this.fighter1, this.fighter2);
+      }
+    }
+    return winner;
   }
 
   priority(): number {
-    if (this.fighter1.getSpeed() > this.fighter2.getSpeed())
+    if (this.fighter1.getSpeed() >= this.fighter2.getSpeed())
       return 1;
     else
       return 2;
   }
   
-  lowEfficiency(): number {
-    if (this.fighter1.getAttack() < 1)
+  lowEfficiency(fighter1: Fighter, fighter2: Fighter): number {
+    if (fighter1.getAttack() < 1)
       return 0;
-    if (this.fighter2.getDefense() < 1)
-      return 50 * this.fighter1.getAttack() * 0.5;
-    return 50 * (this.fighter1.getAttack() / this.fighter2.getDefense()) * 0.5;
+    if (fighter2.getDefense() < 1)
+      return 50 * fighter1.getAttack() * 0.5;
+    return 50 * (fighter1.getAttack() / fighter2.getDefense()) * 0.5;
   }
   
-  neutralEfficiency(): number {
-    if (this.fighter1.getAttack() < 1)
+  neutralEfficiency(fighter1: Fighter, fighter2: Fighter): number {
+    if (fighter1.getAttack() < 1)
       return 0;
-    if (this.fighter2.getDefense() < 1)
-      return 50 * this.fighter1.getAttack();
-    return 50 * (this.fighter1.getAttack() / this.fighter2.getDefense());
+    if (fighter2.getDefense() < 1)
+      return 50 * fighter1.getAttack();
+    return 50 * (fighter1.getAttack() / fighter2.getDefense());
   }
   
-  highEfficiency(): number {
-    if (this.fighter1.getAttack() < 1)
+  highEfficiency(fighter1: Fighter, fighter2: Fighter): number {
+    if (fighter1.getAttack() < 1)
       return 0;
-    if (this.fighter2.getDefense() < 1)
-      return 50 * this.fighter1.getAttack() * 2;
-    return 50 * (this.fighter1.getAttack() / this.fighter2.getDefense()) * 2;
+    if (fighter2.getDefense() < 1)
+      return 50 * fighter1.getAttack() * 2;
+    return 50 * (fighter1.getAttack() / fighter2.getDefense()) * 2;
   }
 }
