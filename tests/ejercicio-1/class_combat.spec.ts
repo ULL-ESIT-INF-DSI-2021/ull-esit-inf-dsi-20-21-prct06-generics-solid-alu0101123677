@@ -7,7 +7,7 @@ import {Pokemon} from '../../src/ejercicio-1/subclass_pokemon';
 import {Marvel} from '../../src/ejercicio-1/subclass_marvel';
 import {DC} from '../../src/ejercicio-1/subclass_dc';
 
-describe.skip('check Combat class', () => {
+describe('check Combat class', () => {
   let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 30, 40, 10, "Siente la fuerza");
   let Superman = new DC("Superman", 1.0, 2.0, 30, 40, 10, "Muere villano");
   let combat = new Combat(DarthVader, Superman);
@@ -26,7 +26,7 @@ describe.skip('check start function', () => {
   });
 });
 
-describe.skip('check priority function', () => {
+describe('check priority function', () => {
   let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 30, 40, 10, "Siente la fuerza");
   let Superman = new DC("Superman", 1.0, 2.0, 30, 40, 20, "Muere villano");
   it('comprobacion si la funcion priority funciona correctamente, se espera un 1', () => {
@@ -45,6 +45,15 @@ describe.skip('check fight function', () => {
   let combat = new Combat(DarthVader, Superman);
   it('comprobacion combat.fight() es igual a 2', () => {
     expect(combat.fight()).to.be.equal(2);
+  });
+});
+
+describe.skip('check attack function', () => {
+  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 30, 40, 10, "Siente la fuerza");
+  let Superman = new DC("Superman", 1.0, 2.0, 30, 40, 10, "Muere villano");
+  let combat = new Combat(DarthVader, Superman);
+  it('comprobacion combat.attack(DarthVader, Superman) es igual a 2', () => {
+    expect(combat.attack(DarthVader, Superman)).to.be.equal(1);
   });
 });
 

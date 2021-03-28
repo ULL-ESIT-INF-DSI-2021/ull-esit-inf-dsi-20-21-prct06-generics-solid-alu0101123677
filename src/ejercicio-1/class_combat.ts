@@ -24,12 +24,12 @@ export class Combat {
     let priority: number = this.priority();
     while (winner == 0) {
       if (priority == 1) {
-        attack(this.fighter1, this.fighter2);
-        attack(this.fighter2, this.fighter1);
+        this.attack(this.fighter1, this.fighter2);
+        this.attack(this.fighter2, this.fighter1);
       }
       else {
-        attack(this.fighter2, this.fighter1);
-        attack(this.fighter1, this.fighter2);
+        this. attack(this.fighter2, this.fighter1);
+        this.attack(this.fighter1, this.fighter2);
       }
     }
     return winner;
@@ -40,6 +40,10 @@ export class Combat {
       return 1;
     else
       return 2;
+  }
+
+  attack(fighter1: Fighter, fighter2: Fighter): number {
+    return 1;
   }
   
   lowEfficiency(fighter1: Fighter, fighter2: Fighter): number {

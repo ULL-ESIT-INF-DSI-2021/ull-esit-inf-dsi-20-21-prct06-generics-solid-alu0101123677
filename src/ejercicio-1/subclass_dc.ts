@@ -3,8 +3,8 @@ import {Fighter} from "./superclass_fighter";
 export class DC extends Fighter {
   constructor(protected name: string, protected height: number, protected weight: number,
     protected attack: number, protected defense: number, protected speed: number,
-    protected catching_phrase: string){
-    super(name, height, weight, attack, defense, speed, catching_phrase,);
+    protected healt: number, protected catching_phrase: string){
+    super(name, height, weight, attack, defense, speed, healt, catching_phrase,);
   }
 
   getName() {
@@ -29,6 +29,10 @@ export class DC extends Fighter {
 
   getSpeed() {
     return this.speed;
+  }
+
+  getHealt() {
+    return this.healt;
   }
 
   getCatchingPhrase() {

@@ -1,7 +1,7 @@
 export abstract class Fighter {
   constructor(protected name: string, protected height: number, protected weight: number,
     protected attack: number, protected defense: number, protected speed: number,
-    protected catching_phrase: string){}
+    protected healt: number, protected catching_phrase: string){}
   
   abstract getName(): string;
   abstract getHeight(): number;
@@ -9,5 +9,7 @@ export abstract class Fighter {
   abstract getAttack(): number;
   abstract getDefense(): number;
   abstract getSpeed(): number;
+  abstract getHealt(): number;
   abstract getCatchingPhrase(): string;
+
 }
