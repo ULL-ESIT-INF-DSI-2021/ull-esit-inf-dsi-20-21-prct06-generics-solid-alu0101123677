@@ -3,7 +3,7 @@ import {expect} from 'chai';
 import {Fighter} from '../../src/ejercicio-1/superclass_fighter';
 import {Pokemon} from '../../src/ejercicio-1/subclass_pokemon';
 
-describe('check Fighter class', () => {
+describe('check Pokemon class', () => {
   let Pikachu = new Pokemon("Pikachu", 1.0, 2.0, 30, 40, "pika pika");
   it('comprobacion si Pikachu es de la clase Pokemon', () => {
     expect(Pikachu).to.be.an.instanceOf(Pokemon);
@@ -12,3 +12,4 @@ describe('check Fighter class', () => {
     expect(Pikachu).to.be.an.instanceOf(Fighter);
   });
 });
+

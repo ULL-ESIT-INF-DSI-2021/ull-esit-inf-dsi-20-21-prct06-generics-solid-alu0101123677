@@ -1,8 +1,8 @@
-import { Fighter } from "./superclass_fighter";
+import {Fighter} from "./superclass_fighter";
 
 export class Pokemon extends Fighter {
-    constructor(protected name: string, protected height: number, protected weight: number,
-        protected attack: number, protected defense: number, protected catching_phrase: string){
-        super(name, height, weight, attack, defense, catching_phrase);
-      }
+  constructor(protected name: string, protected height: number, protected weight: number,
+    protected attack: number, protected defense: number, protected catching_phrase: string){
+    super(name, height, weight, attack, defense, catching_phrase);
   }
+}
