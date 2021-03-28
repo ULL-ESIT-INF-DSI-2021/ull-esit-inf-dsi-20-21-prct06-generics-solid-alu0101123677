@@ -2,28 +2,32 @@ import {Fighter} from "./superclass_fighter"
 
 export class Combat {
   constructor(private fighter1: Fighter, private fighter2: Fighter){}
-}
 
-export function lowEfficiency(attack: number, defense: number): number {
-  if (attack <= 1)
-    return 0;
-  if (defense < 1)
-    return 50 * attack * 0.5;
-  return 50 * (attack / defense) * 0.5;
-}
+  fight(){
 
-export function neutralEfficiency(attack: number, defense: number): number {
-  if (attack < 1)
-    return 0;
-  if (defense < 1)
-    return 50 * attack;
-  return 50 * (attack / defense);
-}
-
-export function highEfficiency(attack: number, defense: number): number {
-  if (attack < 1)
-    return 0;
-  if (defense < 1)
-    return 50 * attack * 2;
-  return 50 * (attack / defense) * 2;
+  }
+  
+  lowEfficiency(): number {
+    if (this.fighter1.getAttack() < 1)
+      return 0;
+    if (this.fighter2.getDefense() < 1)
+      return 50 * this.fighter1.getAttack() * 0.5;
+    return 50 * (this.fighter1.getAttack() / this.fighter2.getDefense()) * 0.5;
+  }
+  
+  neutralEfficiency(): number {
+    if (this.fighter1.getAttack() < 1)
+      return 0;
+    if (this.fighter2.getDefense() < 1)
+      return 50 * this.fighter1.getAttack();
+    return 50 * (this.fighter1.getAttack() / this.fighter2.getDefense());
+  }
+  
+  highEfficiency(): number {
+    if (this.fighter1.getAttack() < 1)
+      return 0;
+    if (this.fighter2.getDefense() < 1)
+      return 50 * this.fighter1.getAttack() * 2;
+    return 50 * (this.fighter1.getAttack() / this.fighter2.getDefense()) * 2;
+  }
 }

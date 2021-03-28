@@ -6,9 +6,6 @@ import {StarWars} from '../../src/ejercicio-1/subclass_starwars';
 import {Pokemon} from '../../src/ejercicio-1/subclass_pokemon';
 import {Marvel} from '../../src/ejercicio-1/subclass_marvel';
 import {DC} from '../../src/ejercicio-1/subclass_dc';
-import {lowEfficiency} from '../../src/ejercicio-1/class_combat';
-import {neutralEfficiency} from '../../src/ejercicio-1/class_combat';
-import {highEfficiency} from '../../src/ejercicio-1/class_combat';
 
 describe('check Combat class', () => {
   let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 30, 40, "Siente la fuerza");
@@ -19,38 +16,58 @@ describe('check Combat class', () => {
   });
 });
 
-describe('check lowEfficiency function', () => {
-  it('comprobacion lowEfficiency(40, 50) es 20', () => {
-    expect(lowEfficiency(40, 50)).to.be.equal(20);
+/*describe('check fight function', () => {
+  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 30, 40, "Siente la fuerza");
+  let Superman = new DC("Superman", 1.0, 2.0, 30, 40, "Muere villano");
+  let combat1 = new Combat(DarthVader, Superman);
+  it('comprobacion combat1.fight() es igual a 2', () => {
+    expect(combat1.fight().to.be.equal(2);
   });
-  it('comprobacion lowEfficiency(0, 50) es 0', () => {
-    expect(lowEfficiency(0, 50)).to.be.equal(0);
+});*/
+
+
+
+describe('check lowEfficiency, neutralEfficiency and highEfficiency  functions with attack and defense greater than 1', () => {
+  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 40, 50, "Siente la fuerza");
+  let Superman = new DC("Superman", 1.0, 2.0, 40, 50, "Muere villano");
+  let combat = new Combat(DarthVader, Superman);
+  it('comprobacion lowEfficiency', () => {
+    expect(combat.lowEfficiency()).to.be.equal(20);
   });
-  it('comprobacion lowEfficiency(40, 50) es 20', () => {
-    expect(lowEfficiency(40, 0)).to.be.equal(1000);
+  it('comprobacion neutralEfficiency', () => {
+    expect(combat.neutralEfficiency()).to.be.equal(40);
+  });
+  it('comprobacion highEfficiency', () => {
+    expect(combat.highEfficiency()).to.be.equal(80);
   });
 });
 
-describe('check neutralEfficiency function', () => {
-  it('comprobacion lowEfficiency(40, 50) es 40', () => {
-    expect(neutralEfficiency(40, 50)).to.be.equal(40);
+describe('check lowEfficiency, neutralEfficiency and highEfficiency functions with attack equal 0', () => {
+  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 0, 50, "Siente la fuerza");
+  let Superman = new DC("Superman", 1.0, 2.0, 0, 50, "Muere villano");
+  let combat = new Combat(DarthVader, Superman);
+  it('comprobacion lowEfficiency', () => {
+    expect(combat.lowEfficiency()).to.be.equal(0);
   });
-  it('comprobacion lowEfficiency(0, 50) es 0', () => {
-    expect(neutralEfficiency(0, 50)).to.be.equal(0);
+  it('comprobacion neutralEfficiency', () => {
+    expect(combat.neutralEfficiency()).to.be.equal(0);
   });
-  it('comprobacion lowEfficiency(40, 50) es 20', () => {
-    expect(neutralEfficiency(40, 0)).to.be.equal(2000);
+  it('comprobacion highEfficiency', () => {
+    expect(combat.highEfficiency()).to.be.equal(0);
   });
 });
 
-describe('check lowEfficiency function', () => {
-  it('comprobacion highEfficiency(40, 50) es 80', () => {
-    expect(highEfficiency(40, 50)).to.be.equal(80);
+describe('check lowEfficiency, neutralEfficiency and highEfficiency functions with defense equal 0', () => {
+  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 40, 0, "Siente la fuerza");
+  let Superman = new DC("Superman", 1.0, 2.0, 40, 0, "Muere villano");
+  let combat1 = new Combat(DarthVader, Superman);
+  it('comprobacion lowEfficiency', () => {
+    expect(combat1.lowEfficiency()).to.be.equal(1000);
   });
-  it('comprobacion lowEfficiency(0, 50) es 0', () => {
-    expect(highEfficiency(0, 50)).to.be.equal(0);
+  it('comprobacion neutralEfficiency', () => {
+    expect(combat1.neutralEfficiency()).to.be.equal(2000);
   });
-  it('comprobacion lowEfficiency(40, 50) es 20', () => {
-    expect(highEfficiency(40, 0)).to.be.equal(4000);
+  it('comprobacion highEfficiency', () => {
+    expect(combat1.highEfficiency()).to.be.equal(4000);
   });
 });
