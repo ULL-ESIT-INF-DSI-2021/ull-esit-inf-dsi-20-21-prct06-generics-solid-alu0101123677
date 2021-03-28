@@ -8,8 +8,8 @@ import {Marvel} from '../../src/ejercicio-1/subclass_marvel';
 import {DC} from '../../src/ejercicio-1/subclass_dc';
 
 describe('check Combat class', () => {
-  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 30, 40, 10, "Siente la fuerza");
-  let Superman = new DC("Superman", 1.0, 2.0, 30, 40, 10, "Muere villano");
+  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 30, 40, 10, 100, "Siente la fuerza");
+  let Superman = new DC("Superman", 1.0, 2.0, 30, 40, 10, 100, "Muere villano");
   let combat = new Combat(DarthVader, Superman);
   it('comprobacion si combat es de la clase Combat', () => {
     expect(combat).to.be.an.instanceOf(Combat);
@@ -18,8 +18,8 @@ describe('check Combat class', () => {
 
 
 describe.skip('check start function', () => {
-  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 30, 40, 10, "Siente la fuerza");
-  let Superman = new DC("Superman", 1.0, 2.0, 30, 40, 10, "Muere villano");
+  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 30, 40, 10, 100, "Siente la fuerza");
+  let Superman = new DC("Superman", 1.0, 2.0, 30, 40, 10, 100, "Muere villano");
   let combat = new Combat(DarthVader, Superman);
   it('comprobacion si la funcion start funciona correctamente', () => {
     expect(combat.start()).to.be.eql("Darth Vader");
@@ -27,8 +27,8 @@ describe.skip('check start function', () => {
 });
 
 describe('check priority function', () => {
-  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 30, 40, 10, "Siente la fuerza");
-  let Superman = new DC("Superman", 1.0, 2.0, 30, 40, 20, "Muere villano");
+  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 30, 40, 10, 100, "Siente la fuerza");
+  let Superman = new DC("Superman", 1.0, 2.0, 30, 40, 20, 100, "Muere villano");
   it('comprobacion si la funcion priority funciona correctamente, se espera un 1', () => {
     let combat = new Combat(Superman, DarthVader);
     expect(combat.priority()).to.be.equal(1);
@@ -40,8 +40,8 @@ describe('check priority function', () => {
 });
 
 describe.skip('check fight function', () => {
-  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 30, 40, 10, "Siente la fuerza");
-  let Superman = new DC("Superman", 1.0, 2.0, 30, 40, 10, "Muere villano");
+  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 30, 40, 10, 100, "Siente la fuerza");
+  let Superman = new DC("Superman", 1.0, 2.0, 30, 40, 10, 100, "Muere villano");
   let combat = new Combat(DarthVader, Superman);
   it('comprobacion combat.fight() es igual a 2', () => {
     expect(combat.fight()).to.be.equal(2);
@@ -49,8 +49,8 @@ describe.skip('check fight function', () => {
 });
 
 describe.skip('check attack function', () => {
-  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 30, 40, 10, "Siente la fuerza");
-  let Superman = new DC("Superman", 1.0, 2.0, 30, 40, 10, "Muere villano");
+  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 30, 40, 10, 100, "Siente la fuerza");
+  let Superman = new DC("Superman", 1.0, 2.0, 30, 40, 10, 100, "Muere villano");
   let combat = new Combat(DarthVader, Superman);
   it('comprobacion combat.attack(DarthVader, Superman) es igual a 2', () => {
     expect(combat.attack(DarthVader, Superman)).to.be.equal(1);
@@ -60,8 +60,8 @@ describe.skip('check attack function', () => {
 
 
 describe('check lowEfficiency, neutralEfficiency and highEfficiency  functions with attack and defense greater than 1', () => {
-  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 40, 50, 10, "Siente la fuerza");
-  let Superman = new DC("Superman", 1.0, 2.0, 40, 50, 10, "Muere villano");
+  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 40, 50, 10, 100, "Siente la fuerza");
+  let Superman = new DC("Superman", 1.0, 2.0, 40, 50, 10, 100, "Muere villano");
   let combat = new Combat(DarthVader, Superman);
   it('comprobacion lowEfficiency', () => {
     expect(combat.lowEfficiency(DarthVader, Superman)).to.be.equal(20);
@@ -75,8 +75,8 @@ describe('check lowEfficiency, neutralEfficiency and highEfficiency  functions w
 });
 
 describe('check lowEfficiency, neutralEfficiency and highEfficiency functions with attack equal 0', () => {
-  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 0, 50, 10, "Siente la fuerza");
-  let Superman = new DC("Superman", 1.0, 2.0, 0, 50, 10, "Muere villano");
+  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 0, 50, 10, 100, "Siente la fuerza");
+  let Superman = new DC("Superman", 1.0, 2.0, 0, 50, 10, 100, "Muere villano");
   let combat = new Combat(DarthVader, Superman);
   it('comprobacion lowEfficiency', () => {
     expect(combat.lowEfficiency(DarthVader, Superman)).to.be.equal(0);
@@ -90,8 +90,8 @@ describe('check lowEfficiency, neutralEfficiency and highEfficiency functions wi
 });
 
 describe('check lowEfficiency, neutralEfficiency and highEfficiency functions with defense equal 0', () => {
-  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 40, 0, 10, "Siente la fuerza");
-  let Superman = new DC("Superman", 1.0, 2.0, 40, 0, 10, "Muere villano");
+  let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 40, 0, 10, 100, "Siente la fuerza");
+  let Superman = new DC("Superman", 1.0, 2.0, 40, 0, 10, 100, "Muere villano");
   let combat = new Combat(DarthVader, Superman);
   it('comprobacion lowEfficiency', () => {
     expect(combat.lowEfficiency(DarthVader, Superman)).to.be.equal(1000);

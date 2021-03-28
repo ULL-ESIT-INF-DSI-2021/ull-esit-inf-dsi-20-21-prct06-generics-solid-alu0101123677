@@ -18,21 +18,27 @@ export class Combat {
   }
 
   fight(): number {
-    let winner: number = 0;
-    //let healt1: number = this.fighter1.
-    //let healt2: number = this.fighter2.
+    let healt1: number = this.fighter1.getHealt();
+    let healt2: number = this.fighter2.getHealt();
     let priority: number = this.priority();
-    while (winner == 0) {
+    while (true) {
       if (priority == 1) {
-        this.attack(this.fighter1, this.fighter2);
-        this.attack(this.fighter2, this.fighter1);
+        healt2 = healt2 - this.attack(this.fighter1, this.fighter2);
+        if (healt2 <= 0)
+          return 1;
+        healt1 = healt1 - this.attack(this.fighter2, this.fighter1);
+        if (healt1 <= 0)
+          return 2;
       }
       else {
-        this. attack(this.fighter2, this.fighter1);
-        this.attack(this.fighter1, this.fighter2);
+        healt1 = healt1 - this. attack(this.fighter2, this.fighter1);
+        if (healt1 <= 0)
+          return 2;
+        healt2 = healt2 -this.attack(this.fighter1, this.fighter2);
+        if (healt2 <= 0)
+          return 1;
       }
     }
-    return winner;
   }
 
   priority(): number {
