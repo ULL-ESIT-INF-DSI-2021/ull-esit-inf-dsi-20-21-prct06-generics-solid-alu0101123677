@@ -13,4 +13,10 @@ export class Plantel {
         return this.plantel[i]
     }
   }
+
+  push(fighter: Fighter): Fighter{
+    let position: number = this.plantel.length;
+    this.plantel.push(fighter);
+    return this.plantel[position];
+  }
 }
