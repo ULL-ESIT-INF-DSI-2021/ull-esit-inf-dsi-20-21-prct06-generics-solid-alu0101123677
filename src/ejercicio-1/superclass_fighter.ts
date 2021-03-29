@@ -12,4 +12,13 @@ export abstract class Fighter {
   abstract getHealt(): number;
   abstract getCatchingPhrase(): string;
 
+  abstract setName(name: string);
+  abstract setHeight(height: number);
+  abstract setWeight(weight: number);
+  abstract setAttack(attack: number);
+  abstract setDefense(defense: number);
+  abstract setSpeed(speed: number);
+  abstract setHealt(healt: number);
+  abstract setCatchingPhrase(catching_phrase: string);
+
 }

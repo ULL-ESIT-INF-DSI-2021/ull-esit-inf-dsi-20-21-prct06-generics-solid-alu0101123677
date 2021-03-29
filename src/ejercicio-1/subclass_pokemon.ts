@@ -38,4 +38,36 @@ export class Pokemon extends Fighter {
   getCatchingPhrase() {
     return this.catching_phrase;
   }
+
+  setName(name: string) {
+    this.name = name;
+  }
+
+  setHeight(height: number) {
+    this.height = height;
+  }
+
+  setWeight(weight: number) {
+    this.weight = weight;
+  }
+
+  setAttack(attack: number) {
+    this.attack = attack;
+  }
+
+  setDefense(defense: number) {
+    this.defense = defense;
+  }
+
+  setSpeed(speed: number) {
+    this.speed = speed;
+  }
+
+  setHealt(healt: number) {
+    this.healt = healt;
+  }
+
+  setCatchingPhrase(catching_phrase: string) {
+    this.catching_phrase = catching_phrase;
+  }
 }
