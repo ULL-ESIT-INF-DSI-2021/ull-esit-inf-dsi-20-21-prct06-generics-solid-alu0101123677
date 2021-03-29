@@ -43,6 +43,7 @@ export class Combat {
         if (healt2 <= 0)
           return 1;
       }
+      console.log('');
     }
   }
 
