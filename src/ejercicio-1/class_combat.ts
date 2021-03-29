@@ -8,7 +8,7 @@ import {Fighter} from "./superclass_fighter"
 export class Combat {
   constructor(private fighter1: Fighter, private fighter2: Fighter){}
   
-  start() {
+  start(): string {
     console.log("¡¡¡El COMBATE EMPIEZA!!!");
     console.log(`Los combatientes son: ${this.fighter1.getName()} y ${this.fighter2.getName()}`);
     let winner :number = this.fight();
