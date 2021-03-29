@@ -48,12 +48,12 @@ describe.skip('check fight function', () => {
   });
 });
 
-describe.skip('check attack function', () => {
+describe('check attack function', () => {
   let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 30, 40, 10, 100, "Siente la fuerza");
   let Superman = new DC("Superman", 1.0, 2.0, 30, 40, 10, 100, "Muere villano");
   let combat = new Combat(DarthVader, Superman);
-  it('comprobacion combat.attack(DarthVader, Superman) es igual a 2', () => {
-    expect(combat.attack(DarthVader, Superman)).to.be.equal(1);
+  it('comprobacion combat.attack(DarthVader, Superman) es igual a 38', () => {
+    expect(combat.attack(DarthVader, Superman)).to.be.equal(38);
   });
 });
 
