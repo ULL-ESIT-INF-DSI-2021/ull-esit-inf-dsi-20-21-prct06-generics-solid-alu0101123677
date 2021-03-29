@@ -39,7 +39,7 @@ describe('check choose function', () => {
   });
 });
 
-describe('check choose function', () => {
+describe('check push function', () => {
   it('comprobacion si la funcion push introduce correctamente luchadores ', () => {
     let IronMan = new Marvel("Iron Man", 1.0, 2.0, 30, 40, 10, 100, "Claramente no soy el típico heroe");
     expect(plantel.push(IronMan)).to.be.an.instanceOf(Marvel);

@@ -29,17 +29,21 @@ export class Combat {
     while (true) {
       if (priority == 1) {
         healt2 = healt2 - this.attack(this.fighter1, this.fighter2);
+        console.log(`A ${this.fighter2.getName()} le queda ${healt2} puntos de vida`);
         if (healt2 <= 0)
           return 1;
         healt1 = healt1 - this.attack(this.fighter2, this.fighter1);
+        console.log(`A ${this.fighter1.getName()} le queda ${healt1} puntos de vida`);
         if (healt1 <= 0)
           return 2;
       }
       else {
         healt1 = healt1 - this.attack(this.fighter2, this.fighter1);
+        console.log(`A ${this.fighter1.getName()} le queda ${healt1} puntos de vida`);
         if (healt1 <= 0)
           return 2;
         healt2 = healt2 -this.attack(this.fighter1, this.fighter2);
+        console.log(`A ${this.fighter2.getName()} le queda ${healt2} puntos de vida`);
         if (healt2 <= 0)
           return 1;
       }
