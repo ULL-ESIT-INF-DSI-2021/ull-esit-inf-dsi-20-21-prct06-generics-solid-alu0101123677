@@ -17,7 +17,7 @@ describe('check Combat class', () => {
 });
 
 
-describe.skip('check start function', () => {
+describe('check start function', () => {
   let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 30, 40, 10, 100, "Siente la fuerza");
   let Superman = new DC("Superman", 1.0, 2.0, 30, 40, 10, 100, "Muere villano");
   let combat = new Combat(DarthVader, Superman);
@@ -39,12 +39,12 @@ describe('check priority function', () => {
   });
 });
 
-describe.skip('check fight function', () => {
+describe('check fight function', () => {
   let DarthVader = new StarWars("Darth Vader", 1.0, 2.0, 30, 40, 10, 100, "Siente la fuerza");
   let Superman = new DC("Superman", 1.0, 2.0, 30, 40, 10, 100, "Muere villano");
   let combat = new Combat(DarthVader, Superman);
   it('comprobacion combat.fight() es igual a 2', () => {
-    expect(combat.fight()).to.be.equal(2);
+    expect(combat.fight()).to.be.equal(1);
   });
 });
 
