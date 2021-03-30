@@ -9,7 +9,7 @@ describe('check Speed class', () => {
   });
 });
 
-describe.only('check conversion function', () => {
+describe('check conversion function', () => {
   let speed = new Speed(1, "kilometro por hora");
   let speed1 = new Speed(1, "milla por hora");
   let speed2 = new Speed(1, "metro por segundo");

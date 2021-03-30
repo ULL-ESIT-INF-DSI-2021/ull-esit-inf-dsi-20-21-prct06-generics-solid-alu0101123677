@@ -1,5 +1,5 @@
 export class Temperature {
-  constructor(private valor: number, private unidad1: string, private unidad2: string ){}
+  constructor(private valor: number, private unidad1: string){}
     
   getValor() {
     return this.valor;
@@ -7,10 +7,6 @@ export class Temperature {
   
   getUnidad1() {
     return this.unidad1;
-  }
-  
-  getUnidad2() {
-    return this.unidad2;
   }
   
   setValor(valor: number) {
@@ -21,11 +17,35 @@ export class Temperature {
     this.unidad1 = unidad1;
   }
   
-  setUnidad2(unidad2: string) {
-    this.unidad2 = unidad2;
-  }
   
-  conversion() {
-    
+  conversion(unidad2: string): number {
+    if (this.unidad1 == "grados celsius") {
+      if (unidad2 == "grados celsius")
+        return this.valor;
+      if (unidad2 == "grados fahrenheit")
+        return (this.valor * (9 / 5)) + 32;
+      if (unidad2 == "kelvin")
+        return this.valor + 273.15;
+    }
+
+    if (this.unidad1 == "grados fahrenheit") {
+      if (unidad2 == "grados celsius")
+        return (this.valor - 32) * (5 / 9);
+      if (unidad2 == "grados fahrenheit")
+        return this.valor;
+      if (unidad2 == "kelvin")
+        return (this.valor - 32) * (5 / 9) + 273.15;
+    }
+
+    if (this.unidad1 == "kelvin") {
+      if (unidad2 == "grados celsius")
+        return this.valor - 273.15;
+      if (unidad2 == "grados fahrenheit")
+        return (this.valor - 273.15) * (9 / 5) + 32;
+      if (unidad2 == "kelvin")
+        return this.valor;
+    }
+
+    return 0;
   }
 }
