@@ -27,7 +27,7 @@ export class Length {
       if (unidad2 == "dm" || unidad2 == "decimetro")
         return this.valor * 10;
       if (unidad2 == "m" || unidad2 == "metro")
-        return this.valor * 1;
+        return this.valor;
       if (unidad2 == "dam" || unidad2 == "decametro")
         return this.valor / 10;
       if (unidad2 == "hm" || unidad2 == "hectometro")
@@ -54,7 +54,7 @@ export class Length {
       if (unidad2 == "hm" || unidad2 == "hectometro")
         return this.valor * 10;
       if (unidad2 == "km" || unidad2 == "kilometro")
-        return this.valor * 1;
+        return this.valor;
     }
 
     if (this.unidad1 == "pie") {
@@ -62,6 +62,8 @@ export class Length {
         return this.valor / 5280.0;
       if (unidad2 == "m" || unidad2 == "metro")
         return this.valor / 3.2808;
+      if (unidad2 == "pie")
+        return this.valor;
     }
 
     if (this.unidad1 == "milla") {
@@ -69,6 +71,8 @@ export class Length {
         return this.valor * 5280.0;
       if (unidad2 == "m" || unidad2 == "metro")
         return this.valor / 0.00062137;
+      if (unidad2 == "milla")
+        return this.valor;
     }
 
     return 0

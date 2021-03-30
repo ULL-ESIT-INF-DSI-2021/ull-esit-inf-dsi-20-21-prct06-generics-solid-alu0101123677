@@ -9,7 +9,7 @@ describe('check Mass class', () => {
   });
 });
 
-describe.only('check conversion function', () => {
+describe('check conversion function', () => {
   let mass = new Mass(20, "g");
   let mass1 = new Mass(20, "kilogramo");
   let mass2 = new Mass(20, "libra");

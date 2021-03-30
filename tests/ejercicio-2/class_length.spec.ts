@@ -9,7 +9,7 @@ describe('check Length class', () => {
   });
 });
 
-describe.only('check conversion function', () => {
+describe('check conversion function', () => {
   let length = new Length(20, "metro");
   let length1 = new Length(20, "kilometro");
   let length2 = new Length(20, "pie");
@@ -68,10 +68,16 @@ describe.only('check conversion function', () => {
   it('comprobacion pie a metro', () => {
     expect(length2.conversion("metro")).to.be.equal(6.0960741282613995);
   });
+  it('comprobacion pie a pie', () => {
+    expect(length2.conversion("pie")).to.be.equal(20);
+  });
   it('comprobacion milla a pie', () => {
     expect(length3.conversion("pie")).to.be.equal(105600);
   });
   it('comprobacion milla a metro', () => {
     expect(length3.conversion("metro")).to.be.equal(32186.94175772889);
+  });
+  it('comprobacion milla a milla', () => {
+    expect(length3.conversion("milla")).to.be.equal(20);
   });
 });
