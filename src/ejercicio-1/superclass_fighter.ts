@@ -5,7 +5,7 @@
  * Se define 8 atributos: dos tipo string, name y catching_phrase; y 6 de tipo number
  * height, weight, attack, defense, speed y healt. Cada atributo se autodefinen.
  * 
- * Se tienen 16 métodos, 6 métodos getters y 6 métodos setters.
+ * Se tienen 16 métodos, 8 métodos getters y 8 métodos setters.
  */
 export abstract class Fighter {
   constructor(protected name: string, protected height: number, protected weight: number,
