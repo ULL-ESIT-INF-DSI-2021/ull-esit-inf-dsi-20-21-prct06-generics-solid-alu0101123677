@@ -9,7 +9,7 @@ describe('check Force class', () => {
   });
 });
 
-describe.only('check conversion function', () => {
+describe('check conversion function', () => {
   let force = new Force(1, "newton");
   let force1 = new Force(1, "kilopondio");
   let force2 = new Force(1, "dina");

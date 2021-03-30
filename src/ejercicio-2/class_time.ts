@@ -1,5 +1,5 @@
 export class Time {
-  constructor(private valor: number, private unidad1: string, private unidad2: string ){}
+  constructor(private valor: number, private unidad1: string){}
     
   getValor() {
     return this.valor;
@@ -7,10 +7,6 @@ export class Time {
   
   getUnidad1() {
     return this.unidad1;
-  }
-  
-  getUnidad2() {
-    return this.unidad2;
   }
   
   setValor(valor: number) {
@@ -21,11 +17,34 @@ export class Time {
     this.unidad1 = unidad1;
   }
   
-  setUnidad2(unidad2: string) {
-    this.unidad2 = unidad2;
-  }
-  
-  conversion() {
+  conversion(unidad2: string): number {
+    if (this.unidad1 == "hora") {
+      if (unidad2 == "hora")
+        return this.valor;
+      if (unidad2 == "minuto")
+        return this.valor * 60;
+      if (unidad2 == "segundo")
+        return this.valor * 3600;
+    }
+
+    if (this.unidad1 == "minuto") {
+      if (unidad2 == "hora")
+        return this.valor / 60;
+      if (unidad2 == "minuto")
+        return this.valor;
+      if (unidad2 == "segundo")
+        return this.valor * 60;
+    }
+
+    if (this.unidad1 == "segundo") {
+      if (unidad2 == "hora")
+        return this.valor / 3600;
+      if (unidad2 == "minuto")
+        return this.valor / 60;
+      if (unidad2 == "segundo")
+        return this.valor;
+    }
     
+    return 0;
   }
 }
