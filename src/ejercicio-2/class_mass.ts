@@ -27,7 +27,7 @@ export class Mass {
       if (unidad2 == "dg" || unidad2 == "decigramo")
         return this.valor * 10;
       if (unidad2 == "g" || unidad2 == "gramo")
-        return this.valor * 1;
+        return this.valor;
       if (unidad2 == "dag" || unidad2 == "decagramo")
         return this.valor / 10;
       if (unidad2 == "hg" || unidad2 == "hectogramo")
@@ -54,7 +54,7 @@ export class Mass {
       if (unidad2 == "hg" || unidad2 == "hectogramo")
         return this.valor * 10;
       if (unidad2 == "kg" || unidad2 == "kilogramo")
-        return this.valor * 1;
+        return this.valor;
     }
 
     if (this.unidad1 == "libra") {
@@ -62,6 +62,8 @@ export class Mass {
         return this.valor * 16;
       if (unidad2 == "g" || unidad2 == "gramo")
         return this.valor / 0.0022046;
+      if (unidad2 == "libra")
+        return this.valor;
     }
 
     if (this.unidad1 == "onza") {
@@ -69,6 +71,8 @@ export class Mass {
         return this.valor / 16;
       if (unidad2 == "g" || unidad2 == "gramo")
         return this.valor / 0.035274;
+      if (unidad2 == "onza")
+        return this.valor;
     }
 
     return 0

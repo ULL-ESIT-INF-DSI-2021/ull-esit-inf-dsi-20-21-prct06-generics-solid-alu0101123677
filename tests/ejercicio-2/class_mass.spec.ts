@@ -9,7 +9,7 @@ describe('check Mass class', () => {
   });
 });
 
-describe('check conversion function', () => {
+describe.only('check conversion function', () => {
   let mass = new Mass(20, "g");
   let mass1 = new Mass(20, "kilogramo");
   let mass2 = new Mass(20, "libra");
@@ -68,10 +68,16 @@ describe('check conversion function', () => {
   it('comprobacion libra a gramo', () => {
     expect(mass2.conversion("gramo")).to.be.equal(9071.940488070397);
   });
+  it('comprobacion libra a libra', () => {
+    expect(mass2.conversion("libra")).to.be.equal(20);
+  });
   it('comprobacion onza a libra', () => {
     expect(mass3.conversion("libra")).to.be.equal(1.25);
   });
   it('comprobacion onza a gramo', () => {
     expect(mass3.conversion("gramo")).to.be.equal(566.9898508816692);
+  });
+  it('comprobacion onza a onza', () => {
+    expect(mass3.conversion("onza")).to.be.equal(20);
   });
 });
