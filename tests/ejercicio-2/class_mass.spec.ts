@@ -9,11 +9,11 @@ describe('check Mass class', () => {
   });
 });
 
-describe.only('check conversion function', () => {
+describe('check conversion function', () => {
   let mass = new Mass(20, "g");
   let mass1 = new Mass(20, "kilogramo");
-  let mass2 = new Mass(20, "libra")
-  let mass3 = new Mass(20, "onza" )
+  let mass2 = new Mass(20, "libra");
+  let mass3 = new Mass(20, "onza");
   it('comprobacion gramo a gramo', () => {
     expect(mass.conversion("gramo")).to.be.equal(20);
   });
@@ -22,6 +22,9 @@ describe.only('check conversion function', () => {
   });
   it('comprobacion gramo a centigramo', () => {
     expect(mass.conversion("cg")).to.be.equal(2000);
+  });
+  it('comprobacion gramo a decigramo', () => {
+    expect(mass.conversion("decigramo")).to.be.equal(200);
   });
   it('comprobacion gramo a decagramo', () => {
     expect(mass.conversion("dag")).to.be.equal(2);
