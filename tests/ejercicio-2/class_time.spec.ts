@@ -10,7 +10,7 @@ describe('check Time class', () => {
 });
 
 
-describe.only('check conversion function', () => {
+describe('check conversion function', () => {
   let time = new Time(1, "hora");
   let time1 = new Time(1, "minuto");
   let time2 = new Time(1, "segundo");
