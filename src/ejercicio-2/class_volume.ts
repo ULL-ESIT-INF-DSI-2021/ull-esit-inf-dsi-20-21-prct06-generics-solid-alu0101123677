@@ -1,5 +1,5 @@
 export class Volume {
-  constructor(private valor: number, private unidad1: string, private unidad2: string ){}
+  constructor(private valor: number, private unidad1: string){}
     
   getValor() {
     return this.valor;
@@ -7,10 +7,6 @@ export class Volume {
   
   getUnidad1() {
     return this.unidad1;
-  }
-  
-  getUnidad2() {
-    return this.unidad2;
   }
   
   setValor(valor: number) {
@@ -21,11 +17,34 @@ export class Volume {
     this.unidad1 = unidad1;
   }
   
-  setUnidad2(unidad2: string) {
-    this.unidad2 = unidad2;
-  }
-  
-  conversion() {
-    
+  conversion(unidad2: string): number {
+    if (this.unidad1 == "metro cubico") {
+      if (unidad2 == "metro cubico")
+        return this.valor;
+      if (unidad2 == "decametro cubico")
+        return this.valor / 1000;
+      if (unidad2 == "decimetro cubico")
+        return this.valor * 1000;
+    }
+
+    if (this.unidad1 == "decametro cubico") {
+      if (unidad2 == "metro cubico")
+        return this.valor * 1000;
+      if (unidad2 == "decametro cubico")
+        return this.valor;
+      if (unidad2 == "decimetro cubico")
+        return this.valor * 1000000;
+    }
+
+    if (this.unidad1 == "decimetro cubico") {
+      if (unidad2 == "metro cubico")
+        return this.valor / 1000;
+      if (unidad2 == "decametro cubico")
+        return this.valor / 1000000;
+      if (unidad2 == "decimetro cubico")
+        return this.valor;
+    }
+
+    return 0;
   }
 }
