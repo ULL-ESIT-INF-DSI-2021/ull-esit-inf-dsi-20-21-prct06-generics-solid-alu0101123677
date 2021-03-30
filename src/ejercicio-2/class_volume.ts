@@ -1,4 +1,6 @@
-export class Volume {
+import {isConvertible} from './interface_isConvertible';
+
+export class Volume implements isConvertible<number, string> {
   constructor(private valor: number, private unidad1: string){}
     
   getValor() {

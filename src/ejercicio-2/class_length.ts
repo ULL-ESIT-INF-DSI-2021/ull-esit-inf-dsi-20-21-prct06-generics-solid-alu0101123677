@@ -1,5 +1,6 @@
+import {isConvertible} from './interface_isConvertible';
 
-export class Length {
+export class Length implements isConvertible<number, string> {
   constructor(private valor: number, private unidad1: string){}
   
   getValor() {

@@ -1,4 +1,6 @@
-export class Force {
+import {isConvertible} from './interface_isConvertible';
+
+export class Force implements isConvertible<number, string> {
   constructor(private valor: number, private unidad1: string){}
     
   getValor() {

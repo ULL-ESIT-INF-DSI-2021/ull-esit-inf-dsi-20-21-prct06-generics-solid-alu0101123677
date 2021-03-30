@@ -1,4 +1,6 @@
-export class Temperature {
+import {isConvertible} from './interface_isConvertible';
+
+export class Temperature implements isConvertible<number, string> {
   constructor(private valor: number, private unidad1: string){}
     
   getValor() {

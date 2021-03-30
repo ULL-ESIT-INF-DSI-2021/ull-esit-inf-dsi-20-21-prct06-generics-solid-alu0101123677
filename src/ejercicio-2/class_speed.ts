@@ -1,4 +1,7 @@
-export class Speed {
+import {isConvertible} from './interface_isConvertible';
+
+
+export class Speed implements isConvertible<number, string> {
     constructor(private valor: number, private unidad1: string){}
     
     getValor() {
