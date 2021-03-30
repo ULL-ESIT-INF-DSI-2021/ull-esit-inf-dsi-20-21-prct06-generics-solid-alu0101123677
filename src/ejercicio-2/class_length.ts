@@ -1,5 +1,33 @@
 import {isConvertible} from './interface_isConvertible';
 
+/**
+ * Clase Length que sirve para realizar las conversiones de la magnitud de longitud
+ * 
+ * Se define 2 atributos, valor de tipo number que representa el valor númerico
+ * y unidad1 de tipo string que define la en que unidad se encuentra.
+ * 
+ * Se tienen 5 métodos, getValor, getUnidad1, setValor, setUnidad1 y conversion.
+ * 
+ * Se ha implementado para que se haga las siguientes conversiones:
+ *   -metro -> milimetro
+ *   -metro -> centimetro
+ *   -metro -> decimetro
+ *   -metro -> decametro
+ *   -metro -> hectometro
+ *   -metro -> kilometro
+ *   -metro -> pie
+ *   -metro -> milla
+ *   -kilometro -> milimetro
+ *   -kilometro -> centimetro
+ *   -kilometro -> decimetro
+ *   -kilometro -> decametro
+ *   -kilometro -> hectometro
+ *   -kilometro -> metro
+ *   -pie -> metro
+ *   -pie -> milla
+ *   -milla -> metro
+ *   -milla -> pie
+ */
 export class Length implements isConvertible<number, string> {
   constructor(private valor: number, private unidad1: string){}
   
@@ -18,7 +46,12 @@ export class Length implements isConvertible<number, string> {
   setUnidad1(unidad1: string) {
     this.unidad1 = unidad1;
   }
-
+  
+  /**
+  * Función utilizada para realizar las conversiones de la magnitud longitud
+  * @param unidad2 de tipo string utilzada para saber a que tipo de unidad hacer la conversión
+  * @returns un tipo number que indica la conversión
+  */
   conversion(unidad2: string): number {
     if (this.unidad1 == "m" || this.unidad1 == "metro") {
       if (unidad2 == "mm" || unidad2 == "milimetro")
