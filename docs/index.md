@@ -96,6 +96,8 @@ El **ejercicio 3** resulta más ameno y sencillo que los anteriores ya que por u
 
 ## 5. Bibliografía
 
-**[Guión Práctica 6]():** Guión de la práctica 5 de la asignatura de Desarrollo de Sistemas Informáticos.
+**[Guión Práctica 6](https://ull-esit-inf-dsi-2021.github.io/prct06-generics-solid/):** Guión de la práctica 5 de la asignatura de Desarrollo de Sistemas Informáticos.
 
-**[Apuntes de Clases de interfaces genéricos. Principios SOLID]():** Apuntes de Clases de interfaces genéricos. principios SOLID.
+**[Apuntes de Clases de interfaces genéricos](https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-generics.html):** Apuntes de Clases de interfaces genéricos.
+
+**[Apuntes de principios SOLID](https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-solid.html):** Apuntes de principios SOLID
