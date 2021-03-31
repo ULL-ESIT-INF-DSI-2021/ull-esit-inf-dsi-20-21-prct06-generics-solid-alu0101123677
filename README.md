@@ -8,4 +8,4 @@
   * **Práctica:** Práctica 6 Clases e interfaces genéricas. Principios SOLID
 
 ## Información
-Para acceder al informe de la práctica 6, se puede acceder mediante el siguiente enlace [Informe de la práctica 6]() en donde se explica el desarrollo de la práctica en formato GitHub Page.
+Para acceder al informe de la práctica 6, se puede acceder mediante el siguiente enlace [Informe de la práctica 6](https://ull-esit-inf-dsi-2021.github.io/ull-esit-inf-dsi-20-21-prct06-generics-solid-alu0101123677/) en donde se explica el desarrollo de la práctica en formato GitHub Page.
