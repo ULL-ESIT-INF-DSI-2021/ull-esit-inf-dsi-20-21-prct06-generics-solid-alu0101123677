@@ -1,4 +1,10 @@
-
+/**
+ * clase Documentary que define los atributos y métodos para definir un documental.
+ * 
+ * Se define 4 parametros, 3 tipo string que son title, director, actor y 1 atributo tipo number.
+ * 
+ * Se tienen 8 métodos, 4 getters y 4 setters.
+ */
 export class Documentary {
   constructor(protected title: string, protected director: string, protected actor: string, protected year: number){}
 

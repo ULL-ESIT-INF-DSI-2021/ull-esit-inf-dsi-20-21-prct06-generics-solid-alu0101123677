@@ -4,13 +4,11 @@
  * 
  * Se define 1 parametros de tipo genérico, T que representa un vector.
  * 
- * Se tienen 4 métodos, filterTitle, filterDirector, filterActor y filterYear.
+ * Se tienen 2 métodos printCollection y printCollectionFilter.
  */
-export interface Streamable<T> {
+export interface Printeable<T> {
   collection: T[];
-  
-  filterTitle(filtro: string): string;
-  filterDirector(filtro: string): string;
-  filterActor(filtro: string): string;
-  filterYear(filtro: number): number;
+
+  printCollection(): string;
+  printCollectionFilter(collection: T[]): string;
 }
