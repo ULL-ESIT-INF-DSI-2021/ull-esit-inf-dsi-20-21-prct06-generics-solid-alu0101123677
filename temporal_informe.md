@@ -68,9 +68,21 @@ El método **conversion** de cada clase recibe un string que se utiliza para ind
 
 En este ejercicio creamos las interfaces genéricas **Streamable** y **Printeable**, así cómo la clase abstracta genérica **BasicStreamableCollection**, las subclases **CollectionDocumentary**, **CollectionMovie** y **CollectionSerie**, además de las clases **Documentary**, **Movie** y **Serie**
 
-En la interfaz genérica Streamable definimos los atributos y funciones comunes para las 
-distintas clases que representen colecciones de series, peliculas y documentales.
+Las clases **Documentary**, **Movie** y **Serie** definen los atributos generales para representar documentales, peliculas y series respectivamente. Cada una de ellas cuenta con 4 atributos para representar el titulo, el director, el actor/narrador y el año, así cómo sus respectivos getters y setters.
 
+En la interfaz genérica **Streamable** definimos los atributos y funciones comunes para las distintas clases que representen colecciones de series, peliculas y documentales. Definimos un tipo genérico T que será un vector y definimos los métodos de filtrado filterTitle, filterDirector, filterActor y filterYear.
+
+En la interfaz genérica **Printeable** definimos los atributos y funciones comunes para las distintas clases que representan colecciones de series, peliculas y documentales. Definimos un tipo genérico que será un vector y definimos los métodos printCollection y printCollectionFilter
+
+La clase abstacta genérica **BasicStreamableCollection** que define los atributos y funciones comunes para las 
+distintas clases que representen colecciones de series, peliculas y documentales, implementa las interfaces
+Streamable y Printeable. Define un tipo genérico que será un vector y definimos los métodos filterTitle, filterDirector, filterActor, filterYear, printCollection y printCollectionFilter.
+
+Las subclases **CollectionDocumentary**, **CollectionMovie**, **CollectionSerie** implementan la clase abstacta genérica **BasicStreamableCollection** y respectivamente implementan colecciones de documentos, peliculas y series, además de que definen para cada clase su propio atributo que definen vectores de las clases **Documentary**, **Movie** y **Serie** respectivamente. Implementan cada una los métodos filterTitle, filterDirector, filterActor, filterYear, printCollection y printCollectionFilter.
+
+Los métodos **filterTitle** **filterDirector**, **filterActor**, **filterYear**, se implementan de la misma manera, reciben un string que indica por que se tiene que filtrar, y dependiendo de la función se filtrará por titulo, director, actor o año de estreno. En cada método declaraos un vector de tipo T, los objetos del vector corresponderán a la clase respectiva según en que subclase se implementen y lo inicializamos vacio, la idea es que cada vez que se encuentre una coincidencia en la colleción con el string de filtrado se realiza un push al vector que creamos antes, para así tener un vector de documentales, peliculas o series según corresponda que se encuentre filtrado. Teniendo esto llamamos a printCollentionFilter para mostar los resultados por pantalla en formato tabla y retornamos un string para comprobar en las pruebas unitarias.
+
+El método **printCollection** imprime por pantalla en formato tabla toda la colección de peliculas, series y documentales correspondiente y la función **prinCollectionFilter** imprime por pantalla en formato tabla la colección filtrada.
 
 ## 4. Conclusiones
 
@@ -80,7 +92,7 @@ En el **ejercicio 1** se podría introducir diversas modificaciones que no afect
 
 El **ejercicio 2** se vuelve bastante repetitivo ya que es pasar de convertir unidades de las diferentes magnitudes y el ejericio crece bastante cuantas más conversiones tengas en cuenta, pero todas van a tener la misma estructura de realizarse y la forma de añadirlas va ser la misma.
 
-
+El **ejercicio 3** resulta más ameno y sencillo que los anteriores ya que por una vez que implementas una de las colecciones las otras dos son una copia, la dificultad reside en si en pensar en la estructura y en como implementarlo con las interfaces genéricas y la clase abstracta genérica.
 
 ## 5. Bibliografía
 
