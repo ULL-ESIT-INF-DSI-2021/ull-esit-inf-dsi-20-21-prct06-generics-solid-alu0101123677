@@ -14,35 +14,35 @@ export class DragonBall extends Fighter {
     super(name, height, weight, attack, defense, speed, healt,  catching_phrase);
   }
 
-  getName() {
+  getName(): string {
     return this.name;
   }
 
-  getHeight() {
+  getHeight(): number {
     return this.height;
   }
 
-  getWeight() {
+  getWeight(): number {
     return this.weight;
   }
 
-  getAttack() {
+  getAttack(): number {
     return this.attack;
   }
 
-  getDefense() {
+  getDefense(): number {
     return this.defense;
   }
 
-  getSpeed() {
+  getSpeed(): number {
     return this.speed;
   }
 
-  getHealt() {
+  getHealt(): number {
     return this.healt;
   }
 
-  getCatchingPhrase() {
+  getCatchingPhrase(): string {
     return this.catching_phrase;
   }
 
