@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "coverage": "nyc npm test",
     "test": "mocha",
     "doc": "typedoc"
   },
@@ -11,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "coveralls": "^3.1.0",
+    "nyc": "^15.1.0",
     "typedoc": "^0.20.33"
   }
 }
