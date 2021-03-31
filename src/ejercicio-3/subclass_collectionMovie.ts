@@ -1,3 +1,3 @@
-export class Documentary {
+export class CollectionMovie {
   constructor(){}
 }
