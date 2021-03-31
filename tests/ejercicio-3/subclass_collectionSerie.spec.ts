@@ -18,6 +18,47 @@ describe('check CollectionSerie class', () => {
   });
 });
 
+describe('check filterTitle function', () => {
+  let collection_serie = new CollectionSerie(collection);
+  it('comprobacion filterTitle con Daredevil', () => {
+    expect(collection_serie.filterTitle("Daredevil")).to.be.eql("Daredevil");
+  });
+  it('comprobacion filterTitle con vikingos', () => {
+    expect(collection_serie.filterTitle("Vikingos")).to.be.eql("Vikingos");
+  });
+});
+
+describe('check filterDirector function', () => {
+  let collection_serie = new CollectionSerie(collection);
+  it('comprobacion filterDirector con Greg Berlanti', () => {
+    expect(collection_serie.filterDirector("Greg Berlanti")).to.be.eql("Greg Berlanti");
+  });
+  it('comprobacion filterDirector con David Benioff', () => {
+    expect(collection_serie.filterDirector("David Benioff")).to.be.eql("David Benioff");
+  });
+});
+
+describe('check filterActor function', () => {
+  let collection_serie = new CollectionSerie(collection);
+  it('comprobacion filterActor con Charlie Cox', () => {
+    expect(collection_serie.filterActor("Charlie Cox")).to.be.eql("Charlie Cox");
+  });
+  it('comprobacion filterActor con Travis Fimmel', () => {
+    expect(collection_serie.filterActor("Travis Fimmel")).to.be.eql("Travis Fimmel");
+  });
+});
+
+
+describe('check filterYear function', () => {
+  let collection_serie = new CollectionSerie(collection);
+  it('comprobacion filterYear con 2013', () => {
+    expect(collection_serie.filterYear(2013)).to.be.equal(2013);
+  });
+  it('comprobacion filterYear con 2014', () => {
+    expect(collection_serie.filterYear(2014)).to.be.equal(2014);
+  });
+});
+
 describe('check printCollection function', () => {
   let collection_serie = new CollectionSerie(collection);
   it('comprobacion printCollection', () => {

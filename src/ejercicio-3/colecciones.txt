@@ -5,8 +5,8 @@ Series:
 -"Vikingos", "Michel Hirst", "Travis Fimmel", 2013               
 
 Pelis
--"La LA Land", "Damien Chazelle", "Ryan Gosling", 2016
--"El Gran Hoter Budapest", "Wes Anderson", "Ralph Fiennes", 2014
+-"La La Land", "Damien Chazelle", "Ryan Gosling", 2016
+-"El Gran Hotel Budapest", "Wes Anderson", "Ralph Fiennes", 2014
 -"Avatar", "James Cameron", "Zoe Saldaña", 2009
 -"Joker", "Todd Philips", "Joaquin Phoenix", 2019
 
