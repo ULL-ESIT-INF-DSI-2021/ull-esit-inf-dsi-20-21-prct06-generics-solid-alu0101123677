@@ -54,17 +54,22 @@ El método **highEfficiency** calcula el daño si el ataque es eficaz y lo retor
 
 ### [Ejercicio 2. Conversor de unidades.]()
 
-En este ejercicio creamos la interfaz genérica **isConvertible** y las clases Force, Length, Mass, Speed, Temperature, Time y Volume.
+En este ejercicio creamos la interfaz genérica **isConvertible** y las clases **Force**, **Length**, **Mass**, **Speed**, **Temperature**, **Time** y **Volume**.
 
-En la interfaz genérica isConvertible define los atributos y funciones comunes para las distintas clases que representan unidades métricas. Se definen 2 atributos de tipo genérico, T y U restringidos a los tipos number y string respectivamente para representar el valor númerico y el tipo de unidad.
+En la interfaz genérica **isConvertible** define los atributos y funciones comunes para las distintas clases que representan unidades métricas. Se definen 2 atributos de tipo genérico, T y U restringidos a los tipos number y string respectivamente para representar el valor númerico y el tipo de unidad. También se define un método conversion utilizada para realizar las conversiones.
 
 Se tiene 5 métodos, 2 métodos getter y 2 métodos setter y el método conversión para realizar las conversiones entre sistemas y unidades.
 
-Las clases Force, Lenght, Mass, Speed, Temperature, Time, Volume se implementan de la misma manera gracias a que utilizan la misma interfaz, todas tienen un atributo tipo number y un atributo string que indican el valor de la unidad y en que unidad se encuentra.
+Las clases **Force**, **Lenght**, **Mass**, **Speed**, **Temperature**, **Time**, **Volume** se implementan de la misma manera gracias a que utilizan la misma interfaz, todas tienen un atributo tipo number y un atributo string que indican el valor de la unidad y en que unidad se encuentra.
 
-El método conversion de cada clase recibe un string que se utiliza para indicar a que unidad queremos hacer la conversión y se retorna el valor con la conversión realizada. En los método conversión se realiza una doble comparación mediante if aninados para saber que tipo vamos a convertir y en que tipo de unidad queremos para así realizar las formulas correspondientes. En el caso de que sea imposible establecer una conversión implementada se retornará 0.
+El método **conversion** de cada clase recibe un string que se utiliza para indicar a que unidad queremos hacer la conversión y se retorna el valor con la conversión realizada. En los método conversión se realiza una doble comparación mediante if aninados para saber que tipo vamos a convertir y en que tipo de unidad queremos para así realizar las formulas correspondientes. En el caso de que sea imposible establecer una conversión implementada se retornará 0.
 
 ### [Ejercicio 3. DSIflix.]()
+
+En este ejercicio creamos las interfaces genéricas **Streamable** y **Printeable**, así cómo la clase abstracta genérica **BasicStreamableCollection**, las subclases **CollectionDocumentary**, **CollectionMovie** y **CollectionSerie**, además de las clases **Documentary**, **Movie** y **Serie**
+
+En la interfaz genérica Streamable definimos los atributos y funciones comunes para las 
+distintas clases que representen colecciones de series, peliculas y documentales.
 
 
 ## 4. Conclusiones

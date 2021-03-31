@@ -3,7 +3,7 @@ import {Streamable} from './interface_Streamable'
 
 /**
  * clase abstacta genérica BasicStreamableCollection que define los atributos y funciones comunes para las 
- * distintas clases que representen colleciones de series, peliculas y documentales, implementa las interfaces
+ * distintas clases que representen colecciones de series, peliculas y documentales, implementa las interfaces
  * Streamable y Printeable.
  * 
  * Se define 1 parametros de tipo genérico, T que representa un vector.
