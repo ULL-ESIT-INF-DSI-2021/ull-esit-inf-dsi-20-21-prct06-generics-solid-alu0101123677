@@ -11,8 +11,8 @@ import {Fighter} from "./superclass_fighter"
  * 
  * Se tienen 7 métodos, start, fight, priority, attack, lowEfficiency, neutralEfficiency y highEfficiency.
  */
-export class Combat {
-  constructor(private fighter1: Fighter, private fighter2: Fighter){}
+export class Combat <T extends Fighter, U extends Fighter>{
+  constructor(private fighter1: T, private fighter2: U){}
   
   /**
    * Función interfaz que informa que se empieza el combate y que se termina asi como el ganador
