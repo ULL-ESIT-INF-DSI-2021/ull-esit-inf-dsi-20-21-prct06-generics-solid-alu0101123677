@@ -17,7 +17,7 @@ El objetivo principal de la práctica es la realización de diversos ejercicios 
 
 Para el desarrollo de la práctica cómo tal primero hay que hacer unas preparaciones previas, hay que aceptar la asignación de la práctica 6 y preparar el entorno del proyecto la práctica 6, para esto es necesario crear y configurar los archivos *package.json* y *tsconfig.jon* así cómo crear la **estructura de directorios**. Además de seguir las pautas para generar la documentación por **typedoc** y los **tests unitarios** realizados **mocha** y **chai**, así cómo la preparación para la utilización del **Instanbul**. 
 
-### [Ejercicio 1. El combate definitivo.]()
+### [Ejercicio 1. El combate definitivo.](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-alu0101123677/tree/master/src/ejercicio-1)
 
 En este ejercicio creamos la superclase **Fighter** y las subclases **DC**, **DragonBall**, **Marvel**, **Pokemon** y **StarWars**, así cómo las clases Combat y Plantel y el método ejercicio1.
 
@@ -52,7 +52,7 @@ La función **neutralEfficiency** calcula el daño si el ataque es neutral y los
 El método **highEfficiency** calcula el daño si el ataque es eficaz y lo retorna.
 
 
-### [Ejercicio 2. Conversor de unidades.]()
+### [Ejercicio 2. Conversor de unidades.](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-alu0101123677/tree/master/src/ejercicio-2)
 
 En este ejercicio creamos la interfaz genérica **isConvertible** y las clases **Force**, **Length**, **Mass**, **Speed**, **Temperature**, **Time** y **Volume**.
 
@@ -64,7 +64,7 @@ Las clases **Force**, **Lenght**, **Mass**, **Speed**, **Temperature**, **Time**
 
 El método **conversion** de cada clase recibe un string que se utiliza para indicar a que unidad queremos hacer la conversión y se retorna el valor con la conversión realizada. En los método conversión se realiza una doble comparación mediante if aninados para saber que tipo vamos a convertir y en que tipo de unidad queremos para así realizar las formulas correspondientes. En el caso de que sea imposible establecer una conversión implementada se retornará 0.
 
-### [Ejercicio 3. DSIflix.]()
+### [Ejercicio 3. DSIflix.](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-alu0101123677/tree/master/src/ejercicio-3)
 
 En este ejercicio creamos las interfaces genéricas **Streamable** y **Printeable**, así cómo la clase abstracta genérica **BasicStreamableCollection**, las subclases **CollectionDocumentary**, **CollectionMovie** y **CollectionSerie**, además de las clases **Documentary**, **Movie** y **Serie**
 
