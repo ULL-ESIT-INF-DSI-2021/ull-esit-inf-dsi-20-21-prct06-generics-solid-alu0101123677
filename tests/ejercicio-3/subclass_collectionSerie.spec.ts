@@ -17,3 +17,19 @@ describe('check CollectionSerie class', () => {
     expect(collection_serie).to.be.an.instanceOf(CollectionSerie);
   });
 });
+
+describe('check printCollection function', () => {
+  let collection_serie = new CollectionSerie(collection);
+  it('comprobacion printCollection', () => {
+    expect(collection_serie.printCollection()).to.be.eql("Daredevil");
+  });
+});
+
+describe('check printCollectionFilter function', () => {
+  let collection_serie = new CollectionSerie(collection);
+  let collection2 = [Daredevil];
+  it('comprobacion printCollectionFilter', () => {
+    expect(collection_serie.printCollectionFilter(collection2)).to.be.eql("Daredevil");
+  });
+});
+

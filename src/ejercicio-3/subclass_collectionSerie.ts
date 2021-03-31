@@ -1,28 +1,34 @@
-import { BasicStreambleCollection } from "./class_BasicStreambleCollection";
+import { BasicStreamableCollection } from "./class_BasicStreamableCollection";
 import {Serie} from "./class_serie"
 
-export class CollectionSerie<T extends Serie> extends BasicStreambleCollection<T> {
+export class CollectionSerie<T extends Serie> extends BasicStreamableCollection<T> {
   constructor(public collection: T[]){
     super(collection);
   }
 
-  filterTitle() {
-
+  filterTitle(): string {
+  return
   }
   
-  filterActor() {
-
+  filterActor(): string {
+  return
   }
   
-  filterAutor() {
-
+  filterAutor(): string {
+  return
   }
   
-  filterYear() {
-
+  filterYear(): string {
+  return
   }
 
-  printCollection() {
-    console.table(this.collection, ["title"]);
+  printCollection(): string {
+    console.table(this.collection, ["title", "director", "actor", "year"]);
+    return this.collection[0].getTitle();
+  }
+
+  printCollectionFilter(collection: T[]): string {
+    console.table(collection, ["title", "director", "actor", "year"])
+    return collection[0].getTitle();
   }
 }

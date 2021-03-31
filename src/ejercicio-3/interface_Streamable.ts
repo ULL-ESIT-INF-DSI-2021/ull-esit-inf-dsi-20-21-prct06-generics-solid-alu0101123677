@@ -2,10 +2,11 @@
 export interface Streamable<T> {
   collection: T[];
 
-  filterAutor();
-  filterTitle();
-  filterActor();
-  filterYear();
+  filterAutor(): string;
+  filterTitle(): string;
+  filterActor(): string;
+  filterYear(): string;
   
-  printCollection();
+  printCollection(): string;
+  printCollectionFilter(collection: T[]): string;
 }
