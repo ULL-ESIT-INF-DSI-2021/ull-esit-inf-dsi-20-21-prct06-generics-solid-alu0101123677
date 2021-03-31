@@ -19,11 +19,11 @@ import {isConvertible} from './interface_isConvertible';
 export class Force implements isConvertible<number, string> {
   constructor(private valor: number, private unidad1: string){}
     
-  getValor() {
+  getValor(): number {
     return this.valor;
   }
   
-  getUnidad1() {
+  getUnidad1(): string {
     return this.unidad1;
   }
   
