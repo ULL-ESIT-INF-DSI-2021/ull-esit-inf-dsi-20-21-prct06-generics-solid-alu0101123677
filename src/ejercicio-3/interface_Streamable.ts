@@ -1,4 +1,4 @@
 
-export interface Streamble<> {
+export interface Streamble<T> {
     
 }
